@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/1fdc6903-b456-4918-904c-f98fc0d8f399/resourceGroups/Tableau_Demo/providers/Microsoft.Web/sites/jet-extension",
+    "appService.deploySubpath": "."
+}

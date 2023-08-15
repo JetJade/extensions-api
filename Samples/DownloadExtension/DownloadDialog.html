@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:16px">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PDF Download Extension Settings</title>
+
+  <!-- jQuery -->
+  <script src="lib/jquery-3.3.1.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="lib/bootstrap.4.4.1.min.css">
+  <script src="lib/bootstrap.4.4.1.bundle.min.js"></script>
+
+  <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+  <script src="lib/tableau.extensions.1.latest.js"></script>
+
+  <!-- Our extension's code -->
+  <script src="./DownloadDialog.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h4>PDF Download Extension</h4>
+    <p>
+      This Extension downloads the pdf for the first embedded worksheet using current filters and applying some post processing.
+    </p>
+
+    <hr />
+
+    <h5>Settings</h5>
+    <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="page-tab" data-toggle="tab" data-target="#page" type="button" role="tab">Page</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="footer-tab" data-toggle="tab" data-target="#footer" type="button" role="tab">Footer</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="postprocessing-tab" data-toggle="tab" data-target="#postprocessing" type="button" role="tab">Post-processing</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="other-tab" data-toggle="tab" data-target="#other" type="button" role="tab">Other</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="page" role="tabpanel">
+        <div class="form-group required">
+          <label for="pageType" class="control-label">Page Type</label>
+          <select id="pageType" class="form-control">
+            <option value="A3">A3</option>
+            <option selected="selected" value="A4">A4</option>
+            <option value="A5">A5</option>
+            <option value="B5">B5</option>
+            <option value="Executive">Executive</option>
+            <option value="Folio">Folio</option>
+            <option value="Ledger">Ledger</option>
+            <option value="Legal">Legal</option>
+            <option value="Letter">Letter</option>
+            <option value="Note">Note</option>
+            <option value="Quarto">Quarto</option>
+            <option value="Tabloid">Tabloid</option>
+          </select>
+        </div>
+    
+        <div class="form-group required">
+          <label for="pageOrientation" class="control-label">Page Orientation</label>
+          <select id="pageOrientation" class="form-control">
+            <option selected="selected" value="Portrait">Portrait</option>
+            <option value="Landscape">Landscape</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="footer" role="tabpanel">
+        <div class="form-group">
+          <label for="footerLeftText" class="control-label">Left Text</label>
+          <input id="footerLeftText" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="footerCenterText" class="control-label">Center Text</label>
+          <input id="footerCenterText" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="footerRightText" class="control-label">Right Text</label>
+          <input id="footerRightText" type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="postprocessing" role="tabpanel">
+        <div class="form-group">
+          <label for="overlayPdfUrl" class="control-label">Overlay PDF</label>
+          <input id="overlayPdfUrl" type="text" class="form-control" placeholder="URL to overlay PDF">
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="other" role="tabpanel">
+        <div class="form-group">
+          <label for="dashboardUrl" class="control-label">Dashboard Url</label>
+          <input id="dashboardUrl" type="text" class="form-control" placeholder="Override for tableau Server dashboard url">
+        </div>
+
+        <div class="form-group">
+          <label for="worksheetName" class="control-label">Worksheet Name</label>
+          <input id="worksheetName" type="text" class="form-control" placeholder="Override for worksheet name">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group form-row">
+      <button id="closeButton" type="button" class="btn btn-primary ml-auto">Save</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:16px">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <!-- jQuery -->
+  <script src="lib/jquery-3.3.1.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="lib/bootstrap.4.4.1.min.css">
+  <script src="lib/bootstrap.4.4.1.bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="lib/css/font-awesome.css">
+
+  <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+  <script src="lib/tableau.extensions.1.latest.js"></script>
+
+  <!-- FileSaver -->
+  <script src="lib/FileSaver.js"></script>
+
+  <!-- Moment -->
+  <script src="lib/moment.2.29.4.js"></script>
+
+  <title>Download</title>
+
+  <!-- Include our own javascript code -->
+  <script src="./polyfill-findIndex.js"></script>
+  <script src="./Download.js"></script>
+</head>
+
+<body>
+  <button id="downloadButton" type="button" class="btn btn-sm btn-secondary w-100">
+    <i class="fa fa-file-pdf-o"></i> Print as PDF
+    <span class="spinner-border spinner-border-sm d-none"></span>
+  </button>
+</body>
+
+</html>
