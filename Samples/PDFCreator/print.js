@@ -1,6 +1,6 @@
 //import { jsPDF } from "jspdf";
 //import { saveAs } from 'file-saver';
-import { saveAs } from 'https://cdn.skypack.dev/pin/file-saver@v2.0.5-UsWqrW8RsYF08S1pEHIw/mode=imports/optimized/file-saver.js';
+import fileSaver from 'https://cdn.skypack.dev/file-saver';
 
 
 'use strict';
