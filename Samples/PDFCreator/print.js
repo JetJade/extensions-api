@@ -25,7 +25,7 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
   function printPage () {
     // While performing async task, show loading message to user.
     var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-    FileSaver.saveAs(blob, "hello world.txt");
+    fileSaver.saveAs(blob, "hello world.txt");
   }
 
   // This helper updates the UI depending on whether or not there are filters
