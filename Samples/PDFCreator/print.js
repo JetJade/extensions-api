@@ -1,3 +1,6 @@
+import { jsPDF } from "jspdf";
+import { saveAs } from 'file-saver';
+
 'use strict';
 
 // Wrap everything in an anonymous function to avoid polluting the global namespace
@@ -6,7 +9,7 @@
 
   $(document).ready(function () {
     tableau.extensions.initializeAsync().then(function () {
-      fetchFilters();
+      //fetchFilters();
 
       // Add button handlers for clearing filters.
       $('#print').click(printPage); //printPage
@@ -19,10 +22,8 @@
   // This function removes all filters from a dashboard.
   function printPage () {
     // While performing async task, show loading message to user.
-    var doc = new jspdf()
-
-    doc.text('Hello world!', 10, 10)
-    doc.save('a4.pdf')
+    var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(blob, "hello world.txt");
   }
 
   // This helper updates the UI depending on whether or not there are filters

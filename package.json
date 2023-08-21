@@ -18,7 +18,10 @@
   "author": "tableau",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^14.1.0"
+    "file-saver": "^2.0.5",
+    "filesaver": "^0.0.13",
+    "http-server": "^14.1.0",
+    "jspdf": "^2.5.1"
   },
   "devDependencies": {
     "@tableau/extensions-api-types": "1.10.0",
