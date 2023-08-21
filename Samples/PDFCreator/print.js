@@ -17,6 +17,7 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
       $('#print').click(printPage); //printPage
     }, function (err) {
       // Something went wrong in initialization.
+      printPage()
       console.log('Error while Initializing: ' + err.toString());
     });
   });
