@@ -27,7 +27,7 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
     var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
     fileSaver.saveAs(blob, "hello world.txt");
   }
-
+  printPage
   // This helper updates the UI depending on whether or not there are filters
   // that exist in the dashboard.  Accepts a boolean.
  
