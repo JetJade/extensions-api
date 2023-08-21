@@ -1,5 +1,5 @@
-parse = require('jspdf');
-parse = require('file-saver');
+//import { jsPDF } from "jspdf";
+//import { saveAs } from 'file-saver';
 
 'use strict';
 
