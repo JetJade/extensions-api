@@ -9,17 +9,17 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
 (function () {
   const unregisterHandlerFunctions = [];
 
-  // $(document).ready(function () {
-  //   tableau.extensions.initializeAsync().then(function () {
-  //     //fetchFilters();
+  $(document).ready(function () {
+    tableau.extensions.initializeAsync().then(function () {
+      //fetchFilters();
 
-  //     // Add button handlers for clearing filters.
-  //     $('#print').click(printPage); //printPage
-  //   }, function (err) {
-  //     // Something went wrong in initialization.
-  //     console.log('Error while Initializing: ' + err.toString());
-  //   });
-  // });
+      // Add button handlers for clearing filters.
+      $('#print').click(printPage); //printPage
+    }, function (err) {
+      // Something went wrong in initialization.
+      console.log('Error while Initializing: ' + err.toString());
+    });
+  });
 
   // This function removes all filters from a dashboard.
   function printPage () {
