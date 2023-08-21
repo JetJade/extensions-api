@@ -32,7 +32,7 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
     console.log("Das sieht gut aus");
   }
 
-  $('#print').click(consoleOut);
+  $('#print').click(consoleOut,printPage);
   
 
   // This helper updates the UI depending on whether or not there are filters
