@@ -1,6 +1,7 @@
 //import { jsPDF } from "jspdf";
 //import { saveAs } from 'file-saver';
 import fileSaver from 'https://cdn.skypack.dev/file-saver';
+import jsPDF from 'https://cdn.skypack.dev/jspdf';
 
 
 'use strict';
@@ -30,7 +31,14 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
     console.log("Das sieht gut aus");
   }
 
-  $('#print').click(consoleOut,printPage);
+  function printPDF () {
+    const doc = new jsPDF();
+
+    doc.text("Hello world!", 10, 10);
+    doc.save("a4.pdf");
+  }
+
+  $('#print').click(consoleOut,printPDF);
   
  
 })();
