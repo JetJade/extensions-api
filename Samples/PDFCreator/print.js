@@ -21,9 +21,7 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
     });
   });
 
-  // This function removes all filters from a dashboard.
   function printPage () {
-    // While performing async task, show loading message to user.
     var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
     fileSaver.saveAs(blob, "hello world.txt");
   }
@@ -34,8 +32,5 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
 
   $('#print').click(consoleOut,printPage);
   
-
-  // This helper updates the UI depending on whether or not there are filters
-  // that exist in the dashboard.  Accepts a boolean.
  
 })();
