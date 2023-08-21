@@ -1,7 +1,7 @@
 //import { jsPDF } from "jspdf";
 //import { saveAs } from 'file-saver';
-import { jsPDF } from './node_modules/file-saver';
-parse = require('./node_modules/file-saver');
+import { jsPDF } from './file-saver';
+parse = require('./file-saver');
 
 'use strict';
 
