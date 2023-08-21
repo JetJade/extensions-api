@@ -28,6 +28,13 @@ import fileSaver from 'https://cdn.skypack.dev/file-saver';
     fileSaver.saveAs(blob, "hello world.txt");
   }
 
+  function consoleOut () {
+    console.log("Das sieht gut aus");
+  }
+
+  $('#print').click(consoleOut);
+  
+
   // This helper updates the UI depending on whether or not there are filters
   // that exist in the dashboard.  Accepts a boolean.
  
