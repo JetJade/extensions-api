@@ -43,7 +43,8 @@
 
       var url = new URL(dashboardUrl);
 
-      let apiUrl = window.location.origin + '/api/download-extension/download' + 
+      let apiUrl = 
+        // window.location.origin + '/api/download-extension/download' + 
         '?dashboardUrl=' + encodeURI(url.origin + url.pathname) +
         '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
         '&pageType=' + encodeURI(settings.pageType) +
