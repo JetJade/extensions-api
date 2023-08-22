@@ -48,10 +48,7 @@
       //   '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
       //   '&pageType=' + encodeURI(settings.pageType) +
       //   '&pageOrientation=' + encodeURI(settings.pageOrientation);
-      let apiUrl = encodeURI(url.origin + url.pathname) +
-        '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
-        '&pageType=' + encodeURI(settings.pageType) +
-        '&pageOrientation=' + encodeURI(settings.pageOrientation);
+      let apiUrl = ""
 
       if (settings.footerLeftText) apiUrl += '&footerLeftText=' + encodeURI(settings.footerLeftText);
       if (settings.footerCenterText) apiUrl += '&footerCenterText=' + encodeURI(settings.footerCenterText);
