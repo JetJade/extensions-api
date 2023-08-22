@@ -43,19 +43,22 @@
 
       var url = new URL(dashboardUrl);
 
-      let apiUrl = 
-        // window.location.origin + '/api/download-extension/download' + 
-        '?dashboardUrl=' + encodeURI(url.origin + url.pathname) +
+      // let apiUrl = window.location.origin + '/api/download-extension/download' + 
+      //   '?dashboardUrl=' + encodeURI(url.origin + url.pathname) +
+      //   '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
+      //   '&pageType=' + encodeURI(settings.pageType) +
+      //   '&pageOrientation=' + encodeURI(settings.pageOrientation);
+      let apiUrl = encodeURI(url.origin + url.pathname) +
         '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
         '&pageType=' + encodeURI(settings.pageType) +
         '&pageOrientation=' + encodeURI(settings.pageOrientation);
-
-        console.log(apiUrl)
 
       if (settings.footerLeftText) apiUrl += '&footerLeftText=' + encodeURI(settings.footerLeftText);
       if (settings.footerCenterText) apiUrl += '&footerCenterText=' + encodeURI(settings.footerCenterText);
       if (settings.footerRightText) apiUrl += '&footerRightText=' + encodeURI(settings.footerRightText);
       if (settings.overlayPdfUrl) apiUrl += '&overlayPdfUrl=' + encodeURI(settings.overlayPdfUrl);
+
+      console.log("joooo "+ apiUrl)
 
       dashboardfilters.forEach(function (filter) {
         let filterValues = getFilterValues(filter);
