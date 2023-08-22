@@ -49,7 +49,7 @@
       //   '&pageType=' + encodeURI(settings.pageType) +
       //   '&pageOrientation=' + encodeURI(settings.pageOrientation);
       let apiUrl = 
-        '?dashboardUrl=' + encodeURI(url.origin + url.pathname) +
+        encodeURI(url.origin + url.pathname) +
         '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
         '&pageType=' + encodeURI(settings.pageType) +
         '&pageOrientation=' + encodeURI(settings.pageOrientation);
