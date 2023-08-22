@@ -38,7 +38,7 @@ import jsPDF from 'https://cdn.skypack.dev/jspdf';
     doc.save("a4.pdf");
   }
 
-  $('#print').click(consoleOut,printPDF);
+  //$('#print').click(consoleOut,printPDF);
   
  
 })();
