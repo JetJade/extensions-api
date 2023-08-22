@@ -40,7 +40,7 @@
         alert('Dashboard url could not be determined, please configure in settings dialog');
         return;
       }
-      //console.log("joooo "+ dashboardUrlUrl)
+      console.log("joooo "+ dashboardUrlUrl)
       var url = new URL(dashboardUrl);
 
       // let apiUrl = window.location.origin + '/api/download-extension/download' + 
@@ -48,7 +48,10 @@
       //   '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
       //   '&pageType=' + encodeURI(settings.pageType) +
       //   '&pageOrientation=' + encodeURI(settings.pageOrientation);
-      let apiUrl = ""
+      let apiUrl = encodeURI(url.origin + url.pathname) +
+        '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
+        '&pageType=' + encodeURI(settings.pageType) +
+        '&pageOrientation=' + encodeURI(settings.pageOrientation);
 
       if (settings.footerLeftText) apiUrl += '&footerLeftText=' + encodeURI(settings.footerLeftText);
       if (settings.footerCenterText) apiUrl += '&footerCenterText=' + encodeURI(settings.footerCenterText);
