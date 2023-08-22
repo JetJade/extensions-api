@@ -49,6 +49,8 @@
         '&pageType=' + encodeURI(settings.pageType) +
         '&pageOrientation=' + encodeURI(settings.pageOrientation);
 
+        console.log(apiUrl)
+
       if (settings.footerLeftText) apiUrl += '&footerLeftText=' + encodeURI(settings.footerLeftText);
       if (settings.footerCenterText) apiUrl += '&footerCenterText=' + encodeURI(settings.footerCenterText);
       if (settings.footerRightText) apiUrl += '&footerRightText=' + encodeURI(settings.footerRightText);
