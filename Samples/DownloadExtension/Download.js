@@ -40,7 +40,7 @@
         alert('Dashboard url could not be determined, please configure in settings dialog');
         return;
       }
-      console.log("joooo "+ dashboardUrlUrl)
+      console.log("joooo "+ dashboardUrl)
       var url = new URL(dashboardUrl);
 
       // let apiUrl = window.location.origin + '/api/download-extension/download' + 
