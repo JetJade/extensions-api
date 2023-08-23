@@ -67,8 +67,9 @@ import jsPDF from 'https://cdn.skypack.dev/jspdf';
     req.send();
   }
 
-
+  $('#print').click(test); //printPage for testing local
   //$('#print').click(consoleOut,printPDF);
+  //http://localhost:8765/Samples/PDFCreator/print.html
   
  
 })();
