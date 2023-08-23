@@ -48,11 +48,11 @@
       //   '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
       //   '&pageType=' + encodeURI(settings.pageType) +
       //   '&pageOrientation=' + encodeURI(settings.pageOrientation);
-      let apiUrl = 
-        encodeURI(url.origin + url.pathname) +
-        '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
-        '&pageType=' + encodeURI(settings.pageType) +
-        '&pageOrientation=' + encodeURI(settings.pageOrientation);
+      let apiUrl = 'http://tableau.demo.sgc.corp/api/3.4/sites/a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc/views/6eb41826-3c38-448e-8b0f-92faf29e2a43/pdf'
+        // encodeURI(url.origin + url.pathname) +
+        // '&worksheetName=' + encodeURI(settings.worksheetName ? settings.worksheetName : dashboard.worksheets[0].name) +
+        // '&pageType=' + encodeURI(settings.pageType) +
+        // '&pageOrientation=' + encodeURI(settings.pageOrientation);
 
       if (settings.footerLeftText) apiUrl += '&footerLeftText=' + encodeURI(settings.footerLeftText);
       if (settings.footerCenterText) apiUrl += '&footerCenterText=' + encodeURI(settings.footerCenterText);
