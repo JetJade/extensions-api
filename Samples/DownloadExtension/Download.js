@@ -82,12 +82,12 @@
 
       $.get({
         url: apiUrl,
+        headers: '"X-Tableau-Auth", "TAl_JaXQRxGjqf4dTR1bPQ|PVsCgWhtB9JysdUrobhpDxb5tq6ICTLc|a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc"',
         xhrFields: {
           withCredentials: true,
         },
         xhr: function () {
             var xhr = new XMLHttpRequest();
-            xhr.setRequestHeader("X-Tableau-Auth", "TAl_JaXQRxGjqf4dTR1bPQ|PVsCgWhtB9JysdUrobhpDxb5tq6ICTLc|a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 2) {
                     if (xhr.status == 200) {
