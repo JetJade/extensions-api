@@ -48,10 +48,11 @@ import jsPDF from 'https://cdn.skypack.dev/jspdf';
       }
     });
 
-    xhr.open("GET", "http://tableau.demo.sgc.corp/api/3.4/sites/a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc/views/6eb41826-3c38-448e-8b0f-92faf29e2a43");
+    xhr.open("GET", "http://tableau.demo.sgc.corp/api/3.4/sites/a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc/views/6eb41826-3c38-448e-8b0f-92faf29e2a43/pdf");
     xhr.setRequestHeader("X-Tableau-Auth", "TAl_JaXQRxGjqf4dTR1bPQ|PVsCgWhtB9JysdUrobhpDxb5tq6ICTLc|a8d1fafd-0bd8-410c-bcb0-afe8cf6ad7bc");
 
     xhr.send();
+    console.log(xhr.responseType)
 
   }
 
