@@ -15,7 +15,7 @@ import jsPDF from 'https://cdn.skypack.dev/jspdf';
       //fetchFilters();
 
       // Add button handlers for clearing filters.
-      $('#print').click(createPDF); //printPage
+      $('#print').click(test); //printPage
     }, function (err) {
       // Something went wrong in initialization.
       console.log('Error while Initializing: ' + err.toString());
@@ -55,6 +55,18 @@ import jsPDF from 'https://cdn.skypack.dev/jspdf';
     console.log(xhr.responseType)
 
   }
+
+  function reqListener() {
+    console.log(this.responseText);
+  }
+
+  function test() {
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", reqListener);
+    req.open("GET", "http://www.example.org/example.txt");
+    req.send();
+  }
+
 
   //$('#print').click(consoleOut,printPDF);
   
